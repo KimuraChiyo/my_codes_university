@@ -1,0 +1,1 @@
+-IC:/IT/IT_LR/LR9/SFML/include -IC:/IT/IT_LR/LR9/SFML/src -isystem C:/IT/IT_LR/LR9/SFML/extlibs/headers/stb_image -isystem C:/IT/IT_LR/LR9/SFML/extlibs/headers/glad/include -isystem C:/IT/IT_LR/LR9/SFML/extlibs/headers/freetype2
