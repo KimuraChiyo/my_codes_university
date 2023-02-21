@@ -199,21 +199,21 @@ while k > 0:
     while n != 0:
         c, n = n, int(input("Введите число: "))
         if c < n and n != 0:
-            flag = [1, 0, 1][flag]
-            # if flag == -2:
-            #     flag = 1
-            # elif flag == -1:
-            #     flag = 0
-            # elif flag == 0:
-            #     flag = 1
+            # flag = [1, 0, 1][flag] # don't work, but must, i think
+            if flag == -2:
+                flag = 1
+            elif flag == -1:
+                flag = 0
+            elif flag == 0:
+                flag = 1
         elif c > n and n != 0:
-            flag = [-1, 0, -1][flag]
-            # if flag == -2:
-            #     flag = -1
-            # elif flag == 1:
-            #     flag = 0
-            # elif flag == 0:
-            #     flag = -1
+            # flag = [-1, 0, -1][flag] # don't work, but must, i think
+            if flag == -2:
+                flag = -1
+            elif flag == 1:
+                flag = 0
+            elif flag == 0:
+                flag = -1
         elif c == n and n != 0:
             flag = 0
     else:

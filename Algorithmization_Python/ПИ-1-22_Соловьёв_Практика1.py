@@ -147,6 +147,8 @@ print("2.11. Четверть коорд. плоскости по точке - (
 x, y = float(input("Введите х: ")), float(input("Введите у: "))
 if x*y > 0:
     print("     Ответ: {} четверть".format(3 if x < 0 else 1), end='\n\n')
+elif x*y == 0:
+    print("     Ответ: {}".format('ось Y' if x == 0 and y != 0 else 'ось X' if y == 0 and x != 0 else 'Center'), end='\n\n')
 else:
     print("     Ответ: {} четверть".format(2 if y > 0 else 4), end='\n\n')
 
