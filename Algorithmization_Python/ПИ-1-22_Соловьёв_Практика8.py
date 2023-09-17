@@ -79,7 +79,7 @@ bool_list = [False]
 for i in range(1, n):
     bool_list.append(lst[i - 1] % 2 == lst[i] % 2)
 print("Для списка:", lst)
-print("    Ответ:", sum(bool_list) if sum(bool_list) == 0 else bool_list.index(True), end="\n"*2)
+print("    Ответ:", sum(bool_list) if sum(bool_list) == 0 else bool_list.index(True) + 1, end="\n"*2)
 
 # 8
 print("8. Дан список A размера N. Найти минимальный элемент из его элементов с четными номерами: A2, A4, A6, … .")
@@ -88,7 +88,7 @@ n = int(input("Введите размер списка: "))
 for i in range(n):
     lst.append(randint(1, 60))
 print("Для списка:", lst)
-need_lst = [lst[i] for i in range(2, len(lst)) if i % 2 == 0]
+need_lst = [lst[i] for i in range(1, len(lst), 2)]
 print("    Ответ:", min(need_lst), end="\n"*2)
 
 # 9
@@ -98,12 +98,12 @@ n = int(input("Введите размер списка: "))
 for i in range(n):
     lst.append(randint(1, 60))
 print("Для списка:", lst)
-print("    Ответ: Индексы: ", end='')
+print("    Ответ: Номера: ", end='')
 count = 0
 for i in range(n-1):
     if lst[i] > lst[i + 1]:
         count += 1
-        print(i, end=' ')
+        print(i + 1, end=' ')
 print("\n"," " * 9, "Их количество:", count, end='\n'*2)
 
 # 10
@@ -277,38 +277,34 @@ n = int(input("Введите размер списка: "))
 for i in range(n):
     lst.append(randint(1, 500))
 print("Для списка:", lst)
-print("    Ответ:", end=' ')
+print("    Ответ: Числа:", end=' ')
+count = 0
 for i in lst:
     if i % 2:
+        count += 1
         print(i, end=' ')
-print("\n")
+print('\n' + 11 * ' ' + f'Их количество: {count}\n')
 
 # ДЗ2
-print("ДЗ2. Дан список A размера N (N — четное число). Вывести его элементыс четными номерами в порядке возрастания номеров: A2, A4, A6, …, AN. Условный оператор не использовать.")
-a = []
+print("ДЗ2. Дан список A размера N (N — четное число). Вывести его элементы с четными номерами в порядке возрастания номеров: A2, A4, A6, …, AN. Условный оператор не использовать.")
 n = int(input("Введите размер списка: "))
-for i in range(n):
-    a.append(randint(1, 500))
+a = [randint(1, 500) for i in range(n)]
 print("Для списка:", a)
-print("    Ответ:", *[a[i] for i in range(2, len(a), 2)], end="\n"*2)
+print("    Ответ:", *[a[i] for i in range(1, len(a), 2)], end="\n"*2)
 
 # ДЗ3
 print("ДЗ3. Дан список размера N и целые числа K и L (1 ≤ K ≤ L ≤ N). Найти сумму элементов списка с номерами от K до L включительно.")
-lst = []
 n = int(input("Введите размер списка: "))
 k, l = int(input("Введите K: ")), int(input("Введите L: "))
-for i in range(n):
-    lst.append(randint(1, 500))
+lst = [randint(1, 500) for i in range(n)]
 print("Для списка:", lst)
 print("    Ответ:", sum(lst[k - 1:l]), end="\n"*2)
 
 # ДЗ4
 print("ДЗ4. Дан список размера N. Найти номер его первого локального минимума (локальный минимум — это элемент, который меньше любого из своих соседей).")
-lst = []
 n = int(input("Введите размер списка: "))
 loc_min = 0
-for i in range(n):
-    lst.append(randint(1, 500))
+lst = [randint(1, 500) for i in range(n)]
 print("Для списка:", lst)
 for i in range(1, n - 1):
     if lst[i - 1] > lst[i] < lst[i + 1]:
@@ -318,15 +314,13 @@ print("    Ответ:", loc_min, end="\n"*2)
 
 # ДЗ5
 print("ДЗ5. Дан целочисленный список A размера N. Переписать в новый целочисленный список B того же размера вначале все элементы исходного списка с четными номерами, а затем — с нечетными: A2,A4, A6, …, A1, A3, A5, … . Условный оператор не использовать.")
-lst = []
 n = int(input("Введите размер списка: "))
-for i in range(n):
-    lst.append(randint(1, 500))
+lst = [randint(1, 500) for i in range(n)]
 print("Для списка:", lst)
 b = []
-for i in range(2, len(lst), 2):
-    b.append(lst[i])
 for i in range(1, len(lst), 2):
+    b.append(lst[i])
+for i in range(0, len(lst), 2):
     b.append(lst[i])
 print("    Ответ:", b, end="\n"*2)
 
@@ -434,7 +428,7 @@ for num, count in dct.items():
     if count < 3:
         while num in lst:
             lst.remove(num)
-print("    Ответ:", lst, end="\n"*2)
+print("    Ответ:", lst, '\n' + 11 * ' ' + f'Длина списка: {len(lst)}',end="\n"*2)
 
 # ЗПС5
 print("ЗПС5. Дан целочисленный список размера N. Удалить из списка все одинаковые элементы, оставив их последние вхождения.")
@@ -505,7 +499,7 @@ for i in range(n):
     lst += [num1]
 print("Для списка:", lst)
 i = 2
-for i in range(2, len(lst) + 1, 3):
+for i in range(1, len(lst) + 1, 3):
     lst.insert(i + 1, lst[i])
 print("    Ответ:", lst, end="\n"*2)
 
