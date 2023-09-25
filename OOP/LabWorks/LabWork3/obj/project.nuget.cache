@@ -1,12 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "OsuVK5a/vM1ToKHxsrprpGZdJ8OQVRjar8yQaxlXmxQ1AZb2cDOykdsUen18nmzkLPy3/VvW2BslNECzKvU5gg==",
+  "dgSpecHash": "Ecwet8Xy2w23hZbSnIADR14rx8IojWds3StGwps3lJaZS8Qu0x/2UWbTa/Z/khk8h668mapyKOmvzk51zZndDw==",
   "success": true,
-  "projectFilePath": "/media/kimura/76A80A51A80A1073/my_codes_university/OOP/LabWork3/LabWork3.csproj",
-  "expectedPackageFiles": [
-    "/home/kimura/.nuget/packages/microsoft.netcore.app.ref/6.0.22/microsoft.netcore.app.ref.6.0.22.nupkg.sha512",
-    "/home/kimura/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.22/microsoft.aspnetcore.app.ref.6.0.22.nupkg.sha512",
-    "/home/kimura/.nuget/packages/microsoft.netcore.app.host.linux-x64/6.0.22/microsoft.netcore.app.host.linux-x64.6.0.22.nupkg.sha512"
-  ],
+  "projectFilePath": "/home/kimura/my_codes_university/OOP/LabWorks/LabWork3/LabWork3.csproj",
+  "expectedPackageFiles": [],
   "logs": []
 }

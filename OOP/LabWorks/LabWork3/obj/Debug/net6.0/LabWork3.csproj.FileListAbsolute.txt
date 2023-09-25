@@ -12,3 +12,17 @@
 /media/kimura/76A80A51A80A1073/my_codes_university/OOP/LabWork3/obj/Debug/net6.0/LabWork3.pdb
 /media/kimura/76A80A51A80A1073/my_codes_university/OOP/LabWork3/obj/Debug/net6.0/LabWork3.genruntimeconfig.cache
 /media/kimura/76A80A51A80A1073/my_codes_university/OOP/LabWork3/obj/Debug/net6.0/ref/LabWork3.dll
+/home/kimura/my_codes_university/OOP/LabWorks/LabWork3/bin/Debug/net6.0/LabWork3
+/home/kimura/my_codes_university/OOP/LabWorks/LabWork3/bin/Debug/net6.0/LabWork3.deps.json
+/home/kimura/my_codes_university/OOP/LabWorks/LabWork3/bin/Debug/net6.0/LabWork3.runtimeconfig.json
+/home/kimura/my_codes_university/OOP/LabWorks/LabWork3/bin/Debug/net6.0/LabWork3.dll
+/home/kimura/my_codes_university/OOP/LabWorks/LabWork3/bin/Debug/net6.0/LabWork3.pdb
+/home/kimura/my_codes_university/OOP/LabWorks/LabWork3/obj/Debug/net6.0/LabWork3.GeneratedMSBuildEditorConfig.editorconfig
+/home/kimura/my_codes_university/OOP/LabWorks/LabWork3/obj/Debug/net6.0/LabWork3.AssemblyInfoInputs.cache
+/home/kimura/my_codes_university/OOP/LabWorks/LabWork3/obj/Debug/net6.0/LabWork3.AssemblyInfo.cs
+/home/kimura/my_codes_university/OOP/LabWorks/LabWork3/obj/Debug/net6.0/LabWork3.csproj.CoreCompileInputs.cache
+/home/kimura/my_codes_university/OOP/LabWorks/LabWork3/obj/Debug/net6.0/LabWork3.dll
+/home/kimura/my_codes_university/OOP/LabWorks/LabWork3/obj/Debug/net6.0/refint/LabWork3.dll
+/home/kimura/my_codes_university/OOP/LabWorks/LabWork3/obj/Debug/net6.0/LabWork3.pdb
+/home/kimura/my_codes_university/OOP/LabWorks/LabWork3/obj/Debug/net6.0/LabWork3.genruntimeconfig.cache
+/home/kimura/my_codes_university/OOP/LabWorks/LabWork3/obj/Debug/net6.0/ref/LabWork3.dll

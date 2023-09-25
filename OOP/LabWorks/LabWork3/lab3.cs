@@ -113,7 +113,13 @@ class Program {
 
         Console.WriteLine("1243 array:");
         Console.ForegroundColor = ConsoleColor.Red;
-        int[] spec_array = new int[] {0, 1, 3, 2};
+        int[] spec_array = new int[n];
+        for (int i = 0; i < n; i++) {
+            spec_array[i] = i;
+        }
+        int temp = spec_array[n - 1];
+        spec_array[n - 1] = spec_array[n - 2];
+        spec_array[n - 2] = temp;
         foreach (int value in spec_array) {
             for (int k = 0; k < m; k++) {
                 Console.Write($"{array[value, k]}\t");
