@@ -1,0 +1,14 @@
+/home/kimura/my_codes_university/OOP/LabWorks/LabWork5/obj/Debug/net7.0/LabWork5.GeneratedMSBuildEditorConfig.editorconfig
+/home/kimura/my_codes_university/OOP/LabWorks/LabWork5/obj/Debug/net7.0/LabWork5.AssemblyInfoInputs.cache
+/home/kimura/my_codes_university/OOP/LabWorks/LabWork5/obj/Debug/net7.0/LabWork5.AssemblyInfo.cs
+/home/kimura/my_codes_university/OOP/LabWorks/LabWork5/obj/Debug/net7.0/LabWork5.csproj.CoreCompileInputs.cache
+/home/kimura/my_codes_university/OOP/LabWorks/LabWork5/bin/Debug/net7.0/LabWork5
+/home/kimura/my_codes_university/OOP/LabWorks/LabWork5/bin/Debug/net7.0/LabWork5.deps.json
+/home/kimura/my_codes_university/OOP/LabWorks/LabWork5/bin/Debug/net7.0/LabWork5.runtimeconfig.json
+/home/kimura/my_codes_university/OOP/LabWorks/LabWork5/bin/Debug/net7.0/LabWork5.dll
+/home/kimura/my_codes_university/OOP/LabWorks/LabWork5/bin/Debug/net7.0/LabWork5.pdb
+/home/kimura/my_codes_university/OOP/LabWorks/LabWork5/obj/Debug/net7.0/LabWork5.dll
+/home/kimura/my_codes_university/OOP/LabWorks/LabWork5/obj/Debug/net7.0/refint/LabWork5.dll
+/home/kimura/my_codes_university/OOP/LabWorks/LabWork5/obj/Debug/net7.0/LabWork5.pdb
+/home/kimura/my_codes_university/OOP/LabWorks/LabWork5/obj/Debug/net7.0/LabWork5.genruntimeconfig.cache
+/home/kimura/my_codes_university/OOP/LabWorks/LabWork5/obj/Debug/net7.0/ref/LabWork5.dll
