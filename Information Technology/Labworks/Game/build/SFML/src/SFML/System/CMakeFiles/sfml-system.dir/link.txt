@@ -1,0 +1,2 @@
+C:\IT\mingw64\bin\ar.exe qc ..\..\..\lib\libsfml-system.a "CMakeFiles/sfml-system.dir/Clock.cpp.obj" "CMakeFiles/sfml-system.dir/Err.cpp.obj" "CMakeFiles/sfml-system.dir/Sleep.cpp.obj" "CMakeFiles/sfml-system.dir/String.cpp.obj" "CMakeFiles/sfml-system.dir/Vector2.cpp.obj" "CMakeFiles/sfml-system.dir/Vector3.cpp.obj" "CMakeFiles/sfml-system.dir/FileInputStream.cpp.obj" "CMakeFiles/sfml-system.dir/MemoryInputStream.cpp.obj" "CMakeFiles/sfml-system.dir/Win32/SleepImpl.cpp.obj"
+C:\IT\mingw64\bin\ranlib.exe ..\..\..\lib\libsfml-system.a

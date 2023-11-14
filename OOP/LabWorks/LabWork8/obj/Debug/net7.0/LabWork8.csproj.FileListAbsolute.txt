@@ -1,0 +1,14 @@
+/home/kimura/my_codes_university/OOP/LabWorks/LabWork8/obj/Debug/net7.0/LabWork8.GeneratedMSBuildEditorConfig.editorconfig
+/home/kimura/my_codes_university/OOP/LabWorks/LabWork8/obj/Debug/net7.0/LabWork8.AssemblyInfoInputs.cache
+/home/kimura/my_codes_university/OOP/LabWorks/LabWork8/obj/Debug/net7.0/LabWork8.AssemblyInfo.cs
+/home/kimura/my_codes_university/OOP/LabWorks/LabWork8/obj/Debug/net7.0/LabWork8.csproj.CoreCompileInputs.cache
+/home/kimura/my_codes_university/OOP/LabWorks/LabWork8/bin/Debug/net7.0/LabWork8
+/home/kimura/my_codes_university/OOP/LabWorks/LabWork8/bin/Debug/net7.0/LabWork8.deps.json
+/home/kimura/my_codes_university/OOP/LabWorks/LabWork8/bin/Debug/net7.0/LabWork8.runtimeconfig.json
+/home/kimura/my_codes_university/OOP/LabWorks/LabWork8/bin/Debug/net7.0/LabWork8.dll
+/home/kimura/my_codes_university/OOP/LabWorks/LabWork8/bin/Debug/net7.0/LabWork8.pdb
+/home/kimura/my_codes_university/OOP/LabWorks/LabWork8/obj/Debug/net7.0/LabWork8.dll
+/home/kimura/my_codes_university/OOP/LabWorks/LabWork8/obj/Debug/net7.0/refint/LabWork8.dll
+/home/kimura/my_codes_university/OOP/LabWorks/LabWork8/obj/Debug/net7.0/LabWork8.pdb
+/home/kimura/my_codes_university/OOP/LabWorks/LabWork8/obj/Debug/net7.0/LabWork8.genruntimeconfig.cache
+/home/kimura/my_codes_university/OOP/LabWorks/LabWork8/obj/Debug/net7.0/ref/LabWork8.dll
