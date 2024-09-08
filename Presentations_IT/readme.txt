@@ -1,1 +1,0 @@
-Presentation for a streaming lecture (I spoke at the beginning like 20 minutes or around this amount)
