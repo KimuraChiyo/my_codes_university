@@ -1,0 +1,11 @@
+x = 1:1:10;
+y = [3, 4, 6, 6.5, 7, 7.5, 9, 11, 10, 9];
+p1 = polyfit(x, y, 1);
+p2 = polyfit(x, y, 2);
+p3 = polyfit(x, y, 3);
+t = 0.5:0.05:12;
+y1 = polyval(p1, t);
+y2 = polyval(p2, t);
+y3 = polyval(p3, t);
+plot(x, y, 'ko', t, y1, 'k-', t, y2, 'k--', t, y3, 'k:'); grid on;
+legend('Табличные данные', 'Прямая', 'Парабола', 'Кубическая парабола');

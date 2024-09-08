@@ -1,0 +1,1 @@
+select * from Product where [Description] like '%Монитор%'

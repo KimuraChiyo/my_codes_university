@@ -1,0 +1,78 @@
+<!DOCTYPE HTML>
+<html lang="ru">
+<head>
+    <meta charset = "UTF-8">
+    <title>CSS Grid</title>
+    <style>
+        .num {
+            grid-area: num;
+            padding-top: 35px;
+            font-size: 50px;
+        }
+        .decrease {
+            grid-area: decrease;    
+        }
+        .reset {
+            grid-area: reset;    
+        }
+        .increase {
+            grid-area: increase;    
+        }
+        .num, .decrease, .reset, .increase {
+            font-weight: bold;
+        }
+        .decrease, .reset, .increase {
+            background-color: rgb(87,204,153);
+        }
+        .decrease, .reset, .increase, .container {
+            text-align: center;
+            border-radius: 10px;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: 110px 70px 110px;
+            grid-template-rows: repeat(4, 25px);
+            column-gap: 10px;
+            row-gap: 15px;
+            padding-left: 20px;
+            background-color: rgb(245,245,245);
+            grid-template-areas:
+                                "num num num"
+                                "num num num"
+                                "num num num"
+                                "decrease reset increase";
+            height: 170px;
+            width: 330px;
+        }
+    </style>
+</head>
+    <body>
+        <div class="container">
+            <div class="num"> 0 </div>
+            <button class="decrease" onclick="decreaseFunc()"> Decrease </button>
+            <button class="reset" onclick="resetFunc()"> Reset </button>
+            <button class="increase" onclick="increaseFunc()"> Increase </button>
+        </div>
+        <script defer>
+            var score = 0;
+            const num_grid = document.getElementsByClassName("num")[0];
+            
+            function update() {
+                num_grid.innerHTML = String(score);
+            };
+            function decreaseFunc() {
+                score = score - 1;
+                update();
+            };
+            function increaseFunc() {
+                score = score + 1;
+                update();
+            };
+            function resetFunc() {
+                score = 0;
+                update();
+            };
+        </script>
+    </body>
+</html>
+

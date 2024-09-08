@@ -1,0 +1,100 @@
+<!DOCTYPE HTML>
+<html lang="ru">
+<head>
+    <meta charset = "UTF-8">
+    <title>calculator</title>
+    <style>
+        .clock {
+            grid-area: clock;
+            background-color: red;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 10vh;
+        }
+        .space1 {
+            grid-area: space1;
+        }
+        .space2 {
+            grid-area: space2;
+        }
+        .space3 {
+            grid-area: space3;
+        }
+        .space4 {
+            grid-area: space4;
+        }
+        .space5 {
+            grid-area: space5;
+        }
+        .space6 {
+            grid-area: space6;
+        }
+        .space7 {
+            grid-area: space7;
+        }
+        .space8 {
+            grid-area: space8;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: 20vw 60vw 20vw;
+            grid-template-rows: 40vh 20vh 40vh;
+            grid-template-areas: "space1 space2 space3"
+                                 "space4 clock space5"
+                                 "space6 space7 space8";
+        }
+    </style>
+</head>
+    <body>
+        <div class="container">
+            <div class="space1"></div>
+            <div class="space2"></div>
+            <div class="space3"></div>
+            <div class="space4"></div>
+            <div class="clock"></div>
+            <div class="space5"></div>
+            <div class="space6"></div>
+            <div class="space7"></div>
+            <div class="space8"></div>
+        </div>
+        <script>
+            clock(); 
+
+            function clock(){
+
+            var date = new Date();
+            var hours = date.getHours();
+            var minutes = date.getMinutes();
+            var seconds = date.getSeconds();
+            
+            var timing = '';
+
+            if (hours > 12) {
+                timing = "PM";
+            } else {
+                timing = "AM"
+            }
+
+            hours = hours % 12;
+            if (hours == 0) {
+                hours = 12;
+            }
+            if (hours < 10) {
+                hours = "0" + hours;
+            }
+            if (minutes < 10) {
+                minutes = "0" + minutes;
+            }
+            if (seconds < 10) {
+                seconds = "0" + seconds;
+            }
+          
+            var str = hours + ":" + minutes + ":" + seconds + " " + timing;
+            document.getElementsByClassName("clock")[0].innerHTML = str;
+            setTimeout("clock()");
+          };
+        </script>
+    </body>
+</html>
+

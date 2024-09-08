@@ -1,0 +1,14 @@
+C:\my_codes_university\OOP\LabWork2\bin\Debug\net7.0\LabWork2.exe
+C:\my_codes_university\OOP\LabWork2\bin\Debug\net7.0\LabWork2.deps.json
+C:\my_codes_university\OOP\LabWork2\bin\Debug\net7.0\LabWork2.runtimeconfig.json
+C:\my_codes_university\OOP\LabWork2\bin\Debug\net7.0\LabWork2.dll
+C:\my_codes_university\OOP\LabWork2\bin\Debug\net7.0\LabWork2.pdb
+C:\my_codes_university\OOP\LabWork2\obj\Debug\net7.0\LabWork2.GeneratedMSBuildEditorConfig.editorconfig
+C:\my_codes_university\OOP\LabWork2\obj\Debug\net7.0\LabWork2.AssemblyInfoInputs.cache
+C:\my_codes_university\OOP\LabWork2\obj\Debug\net7.0\LabWork2.AssemblyInfo.cs
+C:\my_codes_university\OOP\LabWork2\obj\Debug\net7.0\LabWork2.csproj.CoreCompileInputs.cache
+C:\my_codes_university\OOP\LabWork2\obj\Debug\net7.0\LabWork2.dll
+C:\my_codes_university\OOP\LabWork2\obj\Debug\net7.0\refint\LabWork2.dll
+C:\my_codes_university\OOP\LabWork2\obj\Debug\net7.0\LabWork2.pdb
+C:\my_codes_university\OOP\LabWork2\obj\Debug\net7.0\LabWork2.genruntimeconfig.cache
+C:\my_codes_university\OOP\LabWork2\obj\Debug\net7.0\ref\LabWork2.dll

@@ -1,0 +1,73 @@
+<html>
+    <head>
+        <title>Третья лаба</title>
+	<link href="style.css" rel="stylesheet">
+    </head>
+    <body>
+	<h1>CSS</h1>
+	<h1 class="important-content">CSS</h1>
+	<div class="repeated"></div>
+	<button onclick="hiderepeated()" class="next-class">Hide elements with class ".repeated"</button>
+	<button onclick="showrepeated()">Show elements with class ".repeated"</button>
+	<div class="repeated-x"></div>
+	<button onclick="hiderepeatedx()" class="next-class">Hide elements with class ".repeated-x"</button>
+	<button onclick="showrepeatedx()">Show elements with class ".repeated-x"</button>
+	<div class="repeated-y"></div>
+	<button onclick="hiderepeatedy()" class="next-class">Hide elements with class ".repeated-y"</button>
+	<button onclick="showrepeatedy()">Show elements with class ".repeated-y"</button>
+	<div class="no-repeated"></div>
+	<button onclick="hidenorepeated()" class="next-class">Hide elements with class ".no-repeated"</button>
+	<button onclick="shownorepeated()">Show elements with class ".no-repeated"</button>
+	
+<script>
+function hiderepeated() {
+  var x = document.getElementsByClassName("repeated");
+  for (var i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+}
+function showrepeated() {
+  var x = document.getElementsByClassName("repeated");
+  for (var i = 0; i < x.length; i++) {
+    x[i].style.display = "block";
+  }
+}
+function hiderepeatedx() {
+  var x = document.getElementsByClassName("repeated-x");
+  for (var i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+}
+function showrepeatedx() {
+  var x = document.getElementsByClassName("repeated-x");
+  for (var i = 0; i < x.length; i++) {
+    x[i].style.display = "block";
+  }
+}
+function hiderepeatedy() {
+  var x = document.getElementsByClassName("repeated-y");
+  for (var i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+}
+function showrepeatedy() {
+  var x = document.getElementsByClassName("repeated-y");
+  for (var i = 0; i < x.length; i++) {
+    x[i].style.display = "block";
+  }
+}
+function hidenorepeated() {
+  var x = document.getElementsByClassName("no-repeated");
+  for (var i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+}
+function shownorepeated() {
+  var x = document.getElementsByClassName("no-repeated");
+  for (var i = 0; i < x.length; i++) {
+    x[i].style.display = "block";
+  }
+}
+</script>
+    </body>
+</html>

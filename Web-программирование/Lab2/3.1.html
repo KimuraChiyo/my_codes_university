@@ -1,0 +1,54 @@
+<html>
+<head>
+<style>
+table, tr, td, th {
+   border: 1px solid black;
+   border-collapse: collapse;
+}
+td {
+   text-align: center;
+}
+</style>
+</head>
+<body>
+<table>
+    <caption>Caption</caption>
+    <thead>
+    <tr>
+        <th>Заголовок 1</th>
+        <th>Заголовок 2</th>
+        <th>Заголовок 3</th>
+        <th>Заголовок 4</th>
+        <th>Заголовок 5</th>
+    </tr>
+    </thead>
+    <tfoot>
+    <tr>
+        <td><b>Низ 1</b></td>
+        <td><b>Низ 2</b></td>
+        <td><b>Низ 3</b></td>
+        <td><b>Низ 4</b></td>
+        <td><b>Низ 5</b></td>
+    </tr>
+    </tfoot>
+    <tbody>
+    <tr>
+        <td colspan='3'>1</td>
+        <td>4</td>
+        <td rowspan='3'>5</td>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td colspan='2'>2</td>
+        <td>4</td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

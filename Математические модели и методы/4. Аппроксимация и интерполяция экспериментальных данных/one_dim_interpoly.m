@@ -1,0 +1,11 @@
+x = 1:1:10;
+y = [3, 4, 6, 6.5, 7, 7.5, 9, 11, 10, 9];
+plot(x, y, 'ko');
+xx = 0.5:0.05:12;
+yy1 = interp1(x, y, xx, 'nearest');
+yy2 = interp1(x, y, xx, 'linear');
+yy3 = interp1(x, y, xx, 'spline');
+hold on;
+plot(xx, yy1, 'k:', xx, yy2, 'k-', xx, yy3, 'k--'); grid on;
+xlabel('x'); ylavel('y');
+legend('Табличный данные', 'Ступенчатая', 'Линейная', 'Сплайн');

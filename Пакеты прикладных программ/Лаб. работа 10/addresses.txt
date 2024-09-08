@@ -1,0 +1,51 @@
+ID,City,Street,House
+1,New York,5th Ave,10
+2,London,Oxford St,20
+3,Paris,Main St,30
+4,Boston,Champs-Elysees,40
+5,Berlin,Friedrichstrasse,50
+6,Tokyo,Shibuya,60
+7,Rome,Via del Corso,70
+8,Moscow,Tverskaya,80
+9,Sydney,George St,90
+10,Madrid,Gran Via,100
+11,Barcelona,La Rambla,110
+12,Miami,Art Deco District,120
+13,Los Angeles,Rodeo Drive,130
+14,Mexico City,Paseo de la Reforma,140
+15,Rio de Janeiro,Copacabana,150
+16,Toronto,Yonge St,160
+17,Vancouver,Robson St,170
+18,Hong Kong,Nathan Rd,180
+19,Singapore,Orchard Rd,190
+20,Shanghai,Nanjing Rd,200
+21,Seoul,Myeong-dong,210
+22,San Francisco,Union Square,220
+23,Amsterdam,Prinsengracht,230
+24,Brussels,Grand Place,240
+25,Copenhagen,Nyhavn,250
+26,Oslo,Karl Johans Gate,260
+27,Stockholm,Drottninggatan,270
+28,Helsinki,Mannerheimintie,280
+29,Zurich,Bahnhofstrasse,290
+30,Riga,Old Town,300
+31,Vilnius,Gediminas Ave,310
+32,Kiev,Khreschatyk St,320
+33,Minsk,Independence Ave,330
+34,Warsaw,Nowy Swiat,340
+35,Budapest,Andrassy Ave,350
+36,New York,Fifth Avenue,360
+37,Los Angeles,Rodeo Drive,370
+38,Chicago,Michigan Avenue,380
+39,Miami,Lincoln Road,390
+40,Las Vegas,The Strip,400
+41,San Francisco,Union Square,410
+42,Seattle,Pike Place Market,420
+43,Boston,Newbury Street,430
+44,Washington DC,Georgetown,440
+45,New Orleans,Bourbon Street,450
+46,Houston,Galleria,460
+47,Atlanta,Peachtree Street,470
+48,Dallas,NorthPark Center,480
+49,Denver,16th Street Mall,490
+50,Phoenix,Scottsdale Fashion Square,500

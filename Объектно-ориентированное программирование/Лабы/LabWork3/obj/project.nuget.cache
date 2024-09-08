@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "OsuVK5a/vM1ToKHxsrprpGZdJ8OQVRjar8yQaxlXmxQ1AZb2cDOykdsUen18nmzkLPy3/VvW2BslNECzKvU5gg==",
+  "success": true,
+  "projectFilePath": "/media/kimura/76A80A51A80A1073/my_codes_university/OOP/LabWork3/LabWork3.csproj",
+  "expectedPackageFiles": [
+    "/home/kimura/.nuget/packages/microsoft.netcore.app.ref/6.0.22/microsoft.netcore.app.ref.6.0.22.nupkg.sha512",
+    "/home/kimura/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.22/microsoft.aspnetcore.app.ref.6.0.22.nupkg.sha512",
+    "/home/kimura/.nuget/packages/microsoft.netcore.app.host.linux-x64/6.0.22/microsoft.netcore.app.host.linux-x64.6.0.22.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,41 @@
+h1 {
+    font-family: Times New Roman;
+}
+body {
+    background: linear-gradient(to bottom right, #fff, #0ff);
+}
+.important-content {
+    color: red;
+    font-weight: 900;
+    font-size: 32;
+    font-style: italic;
+}
+button {
+    display: block;
+}
+.next-class {
+    margin-top: 20px;
+}
+div {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: 500px;
+    width: 500px;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+}
+.repeated {
+    background-image: url("../Lab1/tasks/img/dog with butterfly.jpg");	
+}
+.repeated-x {
+    background-image: url("../Lab1/tasks/img/dog with butterfly.jpg");	
+    background-repeat: repeat-x;
+}
+.repeated-y {
+    background-image: url("../Lab1/tasks/img/dog with butterfly.jpg");	
+    background-repeat: repeat-y;
+}
+.no-repeated {
+    background-image: url("../Lab1/tasks/img/dog with butterfly.jpg");	
+    background-repeat: no-repeat;
+}

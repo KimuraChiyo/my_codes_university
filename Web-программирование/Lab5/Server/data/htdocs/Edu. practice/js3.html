@@ -1,0 +1,198 @@
+<!DOCTYPE HTML>
+<html lang="ru">
+<head>
+    <meta charset = "UTF-8">
+    <title>CSS Grid</title>
+    <style>
+        .header {
+            grid-area: header;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 3vh;
+        }
+        .cont {
+            grid-area: cont;
+            height: 95vh;
+            overflow-y: auto;
+            /* margin-top: -1vh; */
+        }
+        .openAddForm, .closeAddForm, .closePost {
+            display: flex;
+            border-radius: 100%;
+            margin-left: 35%;
+            height: 3vh;
+            width: 3vh;
+            justify-content: center;
+            align-items: center;
+        }
+        .closeAddForm {
+            display: none;
+        }
+        .closePost {
+            display: none;
+        }
+        .addForm {
+            display: none;
+            grid-area: cont;
+        }
+        .main {
+            grid-area: main;
+            background-color: rgb(245,245,245);
+            border-radius: 1vh*1vw;
+            display: grid;
+            grid-template-columns: 100%;
+            grid-template-rows: 3% 97%;
+            grid-template-areas: 
+                                "header"
+                                "cont";
+        }
+        input, .description {
+            width: 30vw;
+            margin: 5px;
+        }
+        .description {
+            height: 10vh;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: 100%;
+            grid-template-rows: 96vh 1vh;
+            column-gap: 15px;
+            row-gap: 15px;
+            grid-template-areas:
+                                "main"
+                                "footer";
+            justify-content: center;
+        }
+        .post {
+            border: none;
+            background-color: rgb(255, 255, 255);
+            margin: 5px;
+            padding: 5px;
+            border-radius: 1vw;
+            width: 98%;
+            height: fit-content;
+            align-items: center;
+        }
+        .footer {
+            grid-area: footer;
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-end;
+        }
+        .openedPost {
+            display: none;
+            padding: 10px;
+        }
+    </style>
+</head>
+    <body>
+        <div class="container">
+            <div class="main">
+                <div class="header"> 
+                    <b id="header" style="margin-left: 40vw;">Объявления</b>
+                    <button class="openAddForm" onclick="openAddForm()">+</button>
+                    <button class="closeAddForm" onclick="closeAddForm()">x</button>
+                    <button class="closePost" onclick="closePost()">x</button>
+                </div>
+                <div class="openedPost"></div>
+                <div class="addForm">
+                        <form id="addForm" class="addFormCont">
+                            <input type="text" name="postHeader" placeholder="Введите заголовок объявления"/><br>
+                            ​<textarea class="description" name="postDesc" placeholder="Введите описание"></textarea><br>
+                            <input type="text" name="postName" placeholder="Введите своё имя"/><br>
+                            <input type="tel" name="postPhone" placeholder="Введите ваш номер"/><br>
+                            <input type="submit">
+                        </form>
+                </div>
+                <div class="cont"> Объявления отсутствуют </div>
+            </div>
+            <div class="footer"> Разработал Соловьёв Л.А. </div>
+        </div>
+        <script>
+            let lst = [];
+            for (let i = 0; i < 1; i++) {
+                const data = {
+                    header: 'Ищу рабочего на дачный участок',
+                    name: 'Леонид',
+                    desc: 'Ищу рабочего для работ по уходу на дачном участке. Требуется поливать, окучивать, выдергивать сорняки и пр.',
+                    phone: '+7 777 777 777 777'
+                };
+                lst.push(data);
+            }
+            update();
+            let addForm = document.getElementById('addForm');
+            addForm.addEventListener('submit', getFormValue);
+
+            function update() {
+                document.getElementsByClassName('cont')[0].innerHTML = '';
+                for (let i = 0; i < lst.length; i++) {
+                    let pre = '<br><button class="post" onclick="openPost(' + String(i) + ')">';
+                    let post = '</button>'
+                    elem = lst[i];
+                    let headerPost = 'Заголовок: ' + elem.header + '<br>';
+                    let namePost = 'Автор: ' + elem.name + '<br>';
+                    let phonePost = 'Телефон: ' + elem.phone + '<br>';
+
+                    document.getElementsByClassName('cont')[0].innerHTML += (pre + headerPost + namePost + phonePost + post);
+                }
+            }
+
+            function openPost(number) {
+                elem = lst[number];
+                let content = '<div><h1>' + elem.header + '</h1>' + elem.desc + '<h3> Телефон для звонка: ' + elem.phone + '<br>' + 'Моё имя: ' + elem.name + '</h3>'+ '</div>';
+                document.getElementsByClassName("openedPost")[0].innerHTML = content;
+                document.getElementsByClassName("openedPost")[0].style.display = "block";
+                document.getElementsByClassName("openAddForm")[0].style.display = "none";
+                document.getElementsByClassName("closePost")[0].style.display = "flex";
+                document.getElementById("header").innerText = 'Объявление';
+                document.getElementsByClassName("cont")[0].style.display = "none";
+            }
+            function closePost() {
+                document.getElementsByClassName("openedPost")[0].style.display = "none";
+                document.getElementsByClassName("openAddForm")[0].style.display = "flex";
+                document.getElementsByClassName("closePost")[0].style.display = "none";
+                document.getElementById("header").innerText = 'Объявления';
+                document.getElementsByClassName("cont")[0].style.display = "block";
+            }
+
+            function getFormValue(event) {
+                event.preventDefault(); 
+                closeAddForm();
+                let name = addForm.querySelector('[name="postName"]');
+                let header = addForm.querySelector('[name="postHeader"]');
+                let desc = addForm.querySelector('[name="postDesc"]');
+                let phone = addForm.querySelector('[name="postPhone"]');
+                const data = {
+                    header: header.value,
+                    desc: desc.value,
+                    name: name.value,
+                    phone: phone.value
+                };
+                header.value = '';
+                desc.value = '';
+                name.value = '';
+                phone.value = '';
+                lst.push(data);
+                update();
+            }
+
+            function openAddForm() {
+                document.getElementsByClassName("addForm")[0].style.display = "grid";
+                document.getElementsByClassName("openAddForm")[0].style.display = "none";
+                document.getElementsByClassName("closeAddForm")[0].style.display = "flex";
+                document.getElementById("header").innerHTML = '&ensp;Добавить&ensp;&#160;';
+                document.getElementsByClassName("cont")[0].style.display = "none";
+            }
+            function closeAddForm() {
+                document.getElementsByClassName("addForm")[0].style.display = "none";
+                document.getElementsByClassName("openAddForm")[0].style.display = "flex";
+                document.getElementsByClassName("closeAddForm")[0].style.display = "none";
+                document.getElementById("header").innerText = 'Объявления';
+                document.getElementsByClassName("cont")[0].style.display = "block";
+            }
+        </script>
+    </body>
+</html>
+

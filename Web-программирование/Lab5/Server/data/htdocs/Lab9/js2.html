@@ -1,0 +1,388 @@
+<!DOCTYPE HTML>
+<html lang="ru">
+<head>
+    <meta charset = "UTF-8">
+    <title>calculator</title>
+    <style>
+        .btn1 { 
+            grid-area: btn1;
+        }
+        .btn2 { 
+            grid-area: btn2;
+        }
+        .btn3 { 
+            grid-area: btn3;
+        }
+        .btn4 { 
+            grid-area: btn4;
+        }
+        .btn5 { 
+            grid-area: btn5;
+        }
+        .btn6 { 
+            grid-area: btn6;
+        }
+        .btn7 { 
+            grid-area: btn7;
+        }
+        .btn8 { 
+            grid-area: btn8;
+        }
+        .btn9 { 
+            grid-area: btn9;
+        }
+        .btn10 { 
+            grid-area: btn10;
+        }
+        .btn11 { 
+            grid-area: btn11;
+        }
+        .btn12 { 
+            grid-area: btn12;
+        }
+        .btn13 { 
+            grid-area: btn13;
+        }
+        .btn14 { 
+            grid-area: btn14;
+        }
+        .btn15 { 
+            grid-area: btn15;
+        }
+        .btn16 { 
+            grid-area: btn16;
+        }
+        .btn17 { 
+            grid-area: btn17;
+        }
+        .btn18 { 
+            grid-area: btn18;
+        }
+        .btn19 { 
+            grid-area: btn19;
+        }
+        .btn20 { 
+            grid-area: btn20;
+        }
+        .calc-button {
+            background-color: rgb(240, 240, 240);
+            border-radius: 8px;
+            text-align: centered;
+            border: none;
+            font-weight: bold;
+            align-self: stretch;
+            margin-top: 5px;
+            font-size: 22px;
+        }
+        .memory {
+            grid-area: memory;
+        }
+        .input {
+            grid-area: input;
+            font-size: 35px;
+        }
+        .memory, .input {
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-end;
+            font-weight: bold;
+        }
+        .display {
+            display: grid;
+            grid-template-columns: 335px;
+            grid-template-rows: 30px 35px;
+            grid-template-areas: "memory"
+                                 "input";
+            row-gap: 5px;
+            height: 70px;
+            width: 335px;
+            grid-area: display;
+        }
+        .buttons {
+            padding: 5px;
+            display: grid;
+            grid-template-columns: repeat(4, 80px);
+            grid-template-rows: repeat(5, 40px);
+            column-gap: 5px;
+            grid-template-areas: "btn1 btn2 btn3 btn4"
+                                 "btn5 btn6 btn7 btn8"
+                                 "btn9 btn10 btn11 btn12"
+                                 "btn13 btn14 btn15 btn16"
+                                 "btn17 btn18 btn19 btn20";
+            grid-area: buttons;
+        }
+        .calculator {
+            display: grid;
+            grid-template-columns: 335px;
+            grid-template-rows: 70px, 205px;
+            border-radius: 10px;
+            background-color: rgb(245, 245, 245);
+            justify-content: centered;
+            grid-template-areas: "display"
+                                 "buttons";
+            width: 345px;
+            height: 275px;
+        }
+    </style>
+</head>
+    <body>
+        <div class="calculator">
+            <div class="display">
+                <div class="memory"></div>
+                <div class="input">0</div>
+            </div>
+            <div class="buttons">
+                <button class="calc-button btn1" onclick="resetFunc()">C</button>
+                <button class="calc-button btn2" onclick="entered('<')"><-</button>
+                <button class="calc-button btn3" onclick="entered('%')">%</button>
+                <button class="calc-button btn4" onclick="entered('/')">/</button>
+                <button class="calc-button btn5" onclick="entered('7')">7</button>
+                <button class="calc-button btn6" onclick="entered('8')">8</button>
+                <button class="calc-button btn7" onclick="entered('9')">9</button>
+                <button class="calc-button btn8" onclick="entered('*')">*</button>
+                <button class="calc-button btn9" onclick="entered('4')">4</button>
+                <button class="calc-button btn10" onclick="entered('5')">5</button>
+                <button class="calc-button btn11" onclick="entered('6')">6</button>
+                <button class="calc-button btn12" onclick="entered('-')">-</button>
+                <button class="calc-button btn13" onclick="entered('1')">1</button>
+                <button class="calc-button btn14" onclick="entered('2')">2</button>
+                <button class="calc-button btn15" onclick="entered('3')">3</button>
+                <button class="calc-button btn16" onclick="entered('+')">+</button>
+                <button class="calc-button btn17" onclick="entered('r')">+/-</button>
+                <button class="calc-button btn18" onclick="entered('0')">0</button>
+                <button class="calc-button btn19" onclick="entered(',')">,</button>
+                <button class="calc-button btn20" onclick="entered('=')">=</button>
+            </div>
+        </div>
+        <script>
+            let input = '';
+            let memory = '';
+            let opt_input = 0;
+            let evaluated = 0;
+            const memoryElement = document.getElementsByClassName("memory")[0];
+            const inputElement = document.getElementsByClassName("input")[0];
+
+            function entered(char) {
+                switch(char) {
+                    case '0': {
+                        if (opt_input) {
+                            opt_input = 0;
+                            input = '';
+                            update();
+                        }
+                        input = input + '0';
+                        break;
+                    }
+                    case '1': {
+                        if (opt_input) {
+                            opt_input = 0;
+                            input = '';
+                            update();
+                        }
+                        input = input + '1';
+                        break;
+                    }
+                    case '2': {
+                        if (opt_input) {
+                            opt_input = 0;
+                            input = '';
+                            update();
+                        }
+                        input = input + '2';
+                        break;
+                    }
+                    case '3': {
+                        if (opt_input) {
+                            opt_input = 0;
+                            input = '';
+                            update();
+                        }
+                        input = input + '3';
+                        break;
+                    }
+                    case '4': {
+                        if (opt_input) {
+                            opt_input = 0;
+                            input = '';
+                            update();
+                        }
+                        input = input + '4';
+                        break;
+                    }
+                    case '5': {
+                        if (opt_input) {
+                            opt_input = 0;
+                            input = '';
+                            update();
+                        }
+                        input = input + '5';
+                        break;
+                    }
+                    case '6': {
+                        if (opt_input) {
+                            opt_input = 0;
+                            input = '';
+                            update();
+                        }
+                        input = input + '6';
+                        break;
+                    }
+                    case '7': {
+                        if (opt_input) {
+                            opt_input = 0;
+                            input = '';
+                            update();
+                        }
+                        input = input + '7';
+                        break;
+                    }
+                    case '8': {
+                        if (opt_input) {
+                            opt_input = 0;
+                            input = '';
+                            update();
+                        }
+                        input = input + '8';
+                        break;
+                    }
+                    case '9': {
+                        if (opt_input) {
+                            opt_input = 0;
+                            input = '';
+                            update();
+                        }
+                        input = input + '9';
+                        break;
+                    }
+                    case '+': {
+                        if (opt_input == 0) {
+                            if (input.startsWith('-')) {
+                                input = '(' + input + ')';
+                            }
+                            memory = memory + input + '+';
+                            opt_input = 1;
+                        }
+                        memory = memory.replace(/,/g, '.');
+                        input = eval(memory.slice(0, memory.length - 1));
+                        memory = replaceAll(memory, '(', '');
+                        memory = replaceAll(memory, ')', '');
+                        break;
+                    }
+                    case '-': {
+                        if (opt_input == 0) {
+                            if (input.startsWith('-')) {
+                                input = '(' + input + ')';
+                            }
+                            memory = memory + input + '-';
+                            opt_input = 1;
+                        }
+                        memory = memory.replace(/,/g, '.');
+                        input = eval(memory.slice(0, memory.length - 1));
+                        memory = replaceAll(memory, '(', '');
+                        memory = replaceAll(memory, ')', '');
+                        break;
+                    }
+                    case '*': {
+                        if (opt_input == 0) {
+                            if (input.startsWith('-')) {
+                                input = '(' + input + ')';
+                            }
+                            memory = memory + input + '*';
+                            opt_input = 1;
+                        }
+                        memory = memory.replace(/,/g, '.');
+                        // input = eval(memory.slice(0, memory.length - 1));
+                        memory = replaceAll(memory, '(', '');
+                        memory = replaceAll(memory, ')', '');
+                        break;
+                    }
+                    case '/': {
+                        if (opt_input == 0) {
+                            if (input.startsWith('-')) {
+                                input = '(' + input + ')';
+                            }
+                            memory = memory + input + '/';
+                            opt_input = 1;
+                        }
+                        memory = memory.replace(/,/g, '.');
+                        // input = eval(memory.slice(0, memory.length - 1));
+                        memory = replaceAll(memory, '(', '');
+                        memory = replaceAll(memory, ')', '');
+                        break;
+                    }
+                    case '<': {
+                        if (!evaluated) {
+                            if (input != '') {
+                                input = input.slice(0, input.length - 1);
+                            }
+                        } else {
+                            memory = ''
+                            evaluated = 0;
+                        }
+                        break;
+                    }
+                    case '%': {
+                        if (opt_input == 0) {
+                            if (input.startsWith('-')) {
+                                input = '(' + input + ')';
+                            }
+                            memory = memory + input + '%';
+                            opt_input = 1;
+                        }
+                        memory = memory.replace(/,/g, '.');
+                        // input = eval(memory.slice(0, memory.length - 1));
+                        memory = replaceAll(memory, '(', '');
+                        memory = replaceAll(memory, ')', '');
+                        break;
+                    }
+                    case ',': {
+                        input = input + ',';
+                        break;
+                    }
+                    case '=': {
+                        if (input.startsWith('-')) {
+                                input = '(' + input + ')';
+                            }
+                        memory = memory + input;
+                        input = eval(memory.replace(/,/g, '.'));
+                        memory = memory + '=';
+                        memory = replaceAll(memory, '(', '');
+                        memory = replaceAll(memory, ')', '');
+                        evaluated = 1;
+                        break;
+                    }
+                    case 'r': {
+                        if (input.startsWith('-')) {
+                            input = input.slice(1, input.length);
+                        } else {
+                            input = '-' + input;
+                        }
+                        break;
+                    }
+                }
+                update();
+            };
+            function update() {
+                document.getElementsByClassName("memory")[0].innerText = memory;
+                if (input == '') {
+                    document.getElementsByClassName("input")[0].innerText = String(0);
+                } else {
+                    document.getElementsByClassName("input")[0].innerText = input;
+                }
+            };
+            function replaceAll(str, old, patt) {
+                while (str.includes(old)) {
+                    str = str.replace(old, patt);
+                }
+                return str;
+            }
+            function resetFunc() {
+                memory = '';
+                input = '';
+                document.getElementsByClassName("memory")[0].innerText = '';
+                document.getElementsByClassName("input")[0].innerText = String(0);
+            };
+        </script>
+    </body>
+</html>
+

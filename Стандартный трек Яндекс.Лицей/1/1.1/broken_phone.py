@@ -1,0 +1,6 @@
+third_sentense = input()
+first_sentense = input()
+second_sentense = input()
+print(first_sentense)
+print(second_sentense)
+print(third_sentense)

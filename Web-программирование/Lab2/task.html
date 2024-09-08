@@ -1,0 +1,41 @@
+<html>
+<head>
+    <style>
+        table, td, tr, th {
+           border-collapse: collapse;
+           border: 2px solid black;
+        }
+        td {
+           width: 80;
+	   height: 10;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tbody>
+	    <tr>
+		<td rowspan='4' style="width: 160;">1</td>
+		<td>1</td>
+		<td>2</td>
+		<td>3</td>
+		<td rowspan='2'>4</td>
+	    </tr>
+	    <tr>
+		<td rowspan='2' colspan='2'>1</td>
+		<td>2</td>
+	    </tr>
+	    <tr>
+		<td>1</td>
+		<td>2</td>
+	    </tr>
+	    <tr>
+		<td>1</td>
+		<td>2</td>
+		<td>3</td>
+		<td>4</td>
+	    </tr>
+        </tbody>
+    </table>
+</body>
+</html>

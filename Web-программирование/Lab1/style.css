@@ -1,0 +1,31 @@
+body, html {
+    margin: 0px;
+    padding: 0px;
+}
+#container {
+    width: 800px;
+    margin: 0 auto;
+}
+#header {
+    background-color:#ffffff;
+}
+#left {
+    background-color:#ffffff;
+    width: 198px;
+    float: left;
+}
+#content {
+    background-color:#ffffff;
+    width: 600px;
+    margin-left: 2px;
+    float: left;
+}
+#clear {
+    height: 0px;
+    font-size: 1px;
+    line-height: 0px;
+    clear: both;
+}
+#footer {
+    background-color:#ffffff;
+}
