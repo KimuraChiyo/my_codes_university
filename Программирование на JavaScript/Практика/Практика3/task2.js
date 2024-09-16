@@ -12,3 +12,4 @@
     a = 2; b = 2;
     alert(`a = ${a} \nb = ${b} \nmax(a, b) = ${max(a, b)}`);
 }
+

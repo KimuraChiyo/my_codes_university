@@ -37,3 +37,4 @@
     alert(`squareEquation(1, 1, 1):\n${squareEquation(1, 1, 1)}`);
     alert(`squareEquation(-1, -1, -1):\n${squareEquation(-1, -1, -1)}`);
 }
+

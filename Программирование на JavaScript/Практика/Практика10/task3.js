@@ -13,7 +13,7 @@
         return string;
     }
 
-    function equalize(string) {
+    function evaluate(string) {
         string += ' ';
         let regex = /[0-9]+\+[0-9]+/y;
         while (/= /.test(string)) {
@@ -25,6 +25,6 @@
     }
 
     let string = randomString();
-    alert(equalize(string));
-    alert(equalize('1+2= 3+4= 5+6='));
+    alert(evaluate(string));
+    alert(evaluate('1+2= 3+4= 5+6='));
 }

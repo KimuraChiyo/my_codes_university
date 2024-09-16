@@ -1,7 +1,7 @@
 // task 6
 {
     function isValidURL(URL) {
-        let regex = /http[s]*:\/\/www.[a-z]+.[ru|com]/g;
+        let regex = /http[s]?:\/\/www.[a-z]+.(ru|com)/g;
         return regex.test(URL)
     }
     alert(isValidURL('https:\/\/www.yandex.ru'));

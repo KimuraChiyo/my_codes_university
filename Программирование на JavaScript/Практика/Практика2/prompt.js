@@ -10,7 +10,10 @@
 }
 // task 3
 {
-    let num1 = Number(prompt("Введите число1: ", 0))
-    let num2 = Number(prompt("Введите число2: ", 0))
+    let num1 = Number(prompt("Введите число 1: ", 0))
+    let num2 = Number(prompt("Введите число 2: ", 0))
+    let result = num1 + num2;
     alert( `prompt: Сумма этих чисел равна ${result}`)
 }
+
+

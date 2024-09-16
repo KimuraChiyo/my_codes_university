@@ -1,6 +1,7 @@
 // task 4
 {
     function func(string, num) {
+        // не хотел через слайс))0))0)0
         let result = '';
         if (num > 0) {
             let i = 0;

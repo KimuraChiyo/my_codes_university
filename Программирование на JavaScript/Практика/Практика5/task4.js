@@ -1,5 +1,6 @@
 // task 4
 {
+
     function InitObject() {
         this.getProperties = function () {
             this.val1 = Number(prompt("Введите значение первого свойства: ", 10));

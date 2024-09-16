@@ -1,2 +1,4 @@
-
-alert( "Hello World!" );
+// alert
+{
+    alert( "Hello World!" );
+}

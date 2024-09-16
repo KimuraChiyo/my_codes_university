@@ -14,5 +14,4 @@
     }
     
     alert(func("hello world"));
-
 }
