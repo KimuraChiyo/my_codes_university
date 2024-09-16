@@ -1,0 +1,9 @@
+services:
+  server:
+    image: server:1.0
+    build: ./part5
+  proxy:
+    image: proxy:1.0
+    build: ./part6
+    ports:
+      - 80:8080

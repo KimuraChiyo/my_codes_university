@@ -1,0 +1,117 @@
+stages:
+  # part 2 task
+  - build
+  # part 3 task
+  - style
+  # part 4 task
+  - test
+  # part 5 task
+  - deploy
+
+variables:
+  success: "SUCCESS✅"
+  fail: "FAILED❌"
+
+# part 2 realization
+build:
+  script:
+    # building s21_cat and s21_grep
+    - cd src/cat
+    - echo "building s21_cat..."
+    - make s21_cat
+    - cd ../grep
+    - echo "building s21_grep..."
+    - make s21_grep
+  after_script:
+    - >
+      if [ $CI_JOB_STATUS == 'success' ]; then
+        echo 'Build test is ok'
+        sh cicd-notify.sh $success
+      else
+        echo 'Build test is failed'
+        sh cicd-notify.sh $fail
+      fi
+  artifacts:
+    paths:
+      - src/cat/s21_cat
+      - src/grep/s21_grep
+    expire_in: 30 days
+  stage: build
+  tags:
+    - build
+
+# part 3 realization
+style: 
+  script: 
+    - cd src/cat
+    - echo "Checking codestyle in Cat utility"
+    - clang-format --style=Google -Werror -n *.h
+    - clang-format --style=Google -Werror -n *.c
+    - cd ../grep
+    - echo "Checking codestyle in Grep utility"
+    - clang-format --style=Google -Werror -n *.h
+    - clang-format --style=Google -Werror -n *.c
+  after_script:
+    - >
+      if [ $CI_JOB_STATUS == 'success' ]; then
+        echo 'Style check is ok'
+        sh cicd-notify.sh $success
+      else
+        echo 'Style check is failed'
+        sh cicd-notify.sh $fail
+      fi
+  stage: style
+  tags:
+    - style
+
+# part 4 realization
+test:
+  script:
+    - cd src/cat && echo "testing s21_cat..."
+    - make test 1>cat_test.log
+    - cd ../grep && echo "testing s21_grep..."
+    - make test 1>grep_test.log
+    - >
+      if ! grep "FAIL: 0" -c --quiet ../cat/cat_test.log ; then
+        echo "CAT" && grep "FAIL: " ../cat/cat_test.log
+        exit 1
+      elif  ! grep "FAIL: 0" -c --quiet grep_test.log ; then
+        echo "GREP" && grep "FAIL: " grep_test.log
+        exit 1
+      else
+        echo "CAT" && grep "SUCCESS: " ../cat/cat_test.log
+        echo "GREP" && grep "SUCCESS: " grep_test.log
+      fi
+    - rm ../cat/cat_test.log grep_test.log
+  after_script:
+    - >
+      if [ $CI_JOB_STATUS == 'success' ]; then
+        echo 'Testing is ok'
+        sh cicd-notify.sh $success
+      else
+        echo 'Testing is failed'
+        sh cicd-notify.sh $fail
+      fi
+  stage: test
+  tags:
+    - test
+
+deploy:
+  script:
+    - sh ./script.sh
+    # проверка переноса
+    - ssh ironmakr@172.24.116.8 "ls /usr/local/bin"
+  after_script:
+  - >
+    if [ $CI_JOB_STATUS == 'success' ]; then
+      echo 'Deploying is ok'
+      sh cicd-notify.sh $success
+    else
+      echo 'Deploying is failed'
+      sh cicd-notify.sh $fail
+    fi
+  when: manual
+  stage: deploy
+  tags:
+    - deploy
+
